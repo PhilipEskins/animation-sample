@@ -1,0 +1,109 @@
+<div class="navbar">
+  <ul>
+    <li class="home">Home</li>
+    <li class="about"><span>About</span></li>
+    <li id="contact">Co<span class="nMove">n</span><span class="tMove">t</span><span class="aMove">a</span>ct</li>
+  </ul>
+</div>
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  justify-content: space-around;
+}
+
+li {
+  list-style-type: none;
+}
+
+.home:hover {
+  animation: animHome 3s infinite;
+}
+
+@keyframes animHome{
+  from{
+    transform: scale(0.1), rotate(30deg);
+    transform-origin: center bottom;
+    }
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  background: linear-gradient(to top, skyblue 50%, blue 50%);
+  background-size: 100% 200%;
+  background-position:left bottom;
+  transition: .5s ease-out;
+}
+
+.about:hover {
+  background-position:left top;
+  color: white;
+}
+
+#contact:hover .nMove{
+  position: relative;
+  animation: nJump 1s;
+}
+
+#contact:hover .tMove {
+  position: relative;
+  animation: tJump 1s 0.5s;
+}
+
+#contact:hover .aMove {
+  position: relative;
+  animation: aJump 1s 1s;
+}
+
+@keyframes nJump {
+  from{
+    top: 0px;
+    }
+  50% {
+    top: -5px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes tJump {
+  from{
+    top: 0px;
+    }
+  50% {
+    top: -5px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes aJump {
+  from{
+    top: 0px;
+    }
+  50% {
+    top: -5px;
+  }
+  to {
+    top: 0px;
+  }
+}
